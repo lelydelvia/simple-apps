@@ -4,4 +4,9 @@ services:
      restart: always
      ports:
        - "1500:3000"
+     networks:
+       - Net-Dev
      env_file: ./apps/.env
+networks:
+  Net-Dev:
+    external: true
